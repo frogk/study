@@ -1,0 +1,250 @@
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+                
+body{
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.header2{
+    display: none;
+}
+
+.wrap{
+    position: relative;
+}
+
+.background{
+    display: flex;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+}
+
+.mainleft{
+    flex: 0 0 50%;
+    background: url(./../img/candleleft.png) top center / cover;
+    filter: brightness(80%);
+    height: 100vh;
+    transition: all 0.5s; /* 크기 달라질때 부드럽게 넘어감. */
+}
+
+.mainright{
+    flex: 0 0 50%; 
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+
+}
+
+.mainright video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ??????? */
+    object-position: bottom;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 57px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 79px;
+    line-height: 79px;
+}
+
+.header .gnb{
+    display: flex;
+}
+
+.header .gnb li{
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.header h1{
+    background: url(./../img/tam2019.png) no-repeat top left / cover;
+    width: 200px;
+    height: 34px;
+    font-size: 0;
+}
+
+.util{
+    display: flex;
+}
+
+.util li{
+    padding: 0 11px;
+    font-size: 13px;
+}
+
+#lang{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #fff;
+}
+
+#lang option{
+    color : #000;
+}
+
+.util li:last-child>button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.main{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.copy>span{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.copy>h1{
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.copy-sm{
+    display: flex;
+    line-height: 30px;
+    line-height: 40px;
+    
+}
+
+.copy-sm>p{
+    font-size: 23px;
+}
+
+.copy-sm>h1{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.main>a{
+    display: block;
+    width: 176px;
+    height: 45px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    margin-top: 30px;
+}
+
+.footer{
+    padding: 50px 0 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #535353;
+    line-height: 20px;
+}
+
+.footer-top a{
+    border-bottom: 1px solid #535353;
+}
+
+.footer-bottom{
+    margin: 20px 0;
+}
+
+.footer-bottom a{
+    border-bottom: 1px solid #535353;
+}
+
+@media screen and (max-width:1200px){
+    .header{
+        display: none;
+    }
+
+    .header2{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .header2 h1{
+        background: url(./../img/tam2019.png) no-repeat top left / cover;
+        width: 112px;
+        height: 19px;
+        font-size: 0;
+    }
+
+    .header2 button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+    }
+     
+}
+
+@media screen and (max-width:768px){
+    .mainleft{
+        background: url(./../img/candleleft.png) top center / cover;
+        filter: brightness(80%);
+        flex: 0 0 100%;
+        height: 100vh;
+    }
+    .mainright{
+        flex: 0 0 100%
+    }
+
+    .main{
+        text-align: center;
+        position: fixed;
+        padding: 0 30px 40px;
+        top: 75%;
+    }
+
+    .main h1{
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+    .main p{
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    .main a {
+        width: 298px;
+    }
+    .footer{
+        font-size: 8px;
+    }
+}
